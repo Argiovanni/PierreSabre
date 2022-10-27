@@ -7,9 +7,10 @@ public class Commercant extends Humain{
 	}
 
 	public int seFaireExtorquer() {
+		int bourse = getArgent();
 		super.perdreArgent(getArgent());
 		super.parler("J’ai tout perdu! Le monde est trop injuste...");
-		return super.getArgent();
+		return bourse;
 	}
 	
 	public void recevoir(int argent) {
