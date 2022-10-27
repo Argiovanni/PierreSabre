@@ -18,7 +18,7 @@ public class Humain {
 		return argent;
 	}
 	
-	private String prendreParole() {
+	protected String prendreParole() {
 		return "(" + nom +")- ";
 	}
 	
@@ -43,11 +43,11 @@ public class Humain {
 		}
 	}
 	
-	private void gagnerArgent(int gain) {
+	protected void gagnerArgent(int gain) {
 		this.argent += gain;
 	}
 	
-	private void perdreArgent(int perte) {
+	protected void perdreArgent(int perte) {
 		if (perte > argent) { // autorise humain à avoir des dettes ? ou fixe sur 0 anyways ?
 			this.argent = 0; 
 		} else {
