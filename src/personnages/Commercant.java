@@ -4,8 +4,12 @@ public class Commercant extends Humain{
 	
 	public Commercant(String nom, int argent) {
 		super(nom, "thé", argent);
+//	super.nom = nom;
+//	super.boissonFavorite = "thé";
+//	super.argent = argent;
+		
 	}
-
+	
 	public int seFaireExtorquer() {
 		int bourse = getArgent();
 		super.perdreArgent(getArgent());
