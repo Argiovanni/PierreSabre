@@ -9,10 +9,21 @@ public class Yakuza extends Humain{
 		this.clan = clan;
 	}
 	
+	public String getClan() {
+		return clan;
+	}
+
+
 	public int getReputation() {
 		return reputation;
 	}
-
+	
+	@Override
+	public void direBonjour() {
+		super.direBonjour();
+		parler("Mon clan est celui de " + getClan() + ".");
+	}
+	
 	public void extorquer(Commercant victime) {
 		super.parler(victime.getNom() + ", si tu tiens à la vie donne moi ta bourse !");
 		int vol = victime.seFaireExtorquer();
