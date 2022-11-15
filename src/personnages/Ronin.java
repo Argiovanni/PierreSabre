@@ -22,13 +22,13 @@ public class Ronin extends Humain {
 		if (force >= reputationAdversaire) {
 			super.parler("Je t'ai eu petit Yakuza !");
 			bourse = adversaire.perdre();
-			honneur += 1;
+			honneur ++;
 			super.gagnerArgent(bourse);			
 		} else {
 			bourse = super.getArgent();
 			super.parler("J'ai perdu contre ce yakuza, mon honneur et ma bourse ont en pris un coup.");
-			honneur -= 1;
-			super.argent -= bourse;
+			honneur --;
+			super.perdreArgent(bourse);
 			adversaire.gagner(bourse);
 			
 		}
